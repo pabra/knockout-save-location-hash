@@ -1,2 +1,5 @@
-# knockout-save-location-hash
-save ko observables to location hash 
+knockout-save-location-hash
+===========================
+
+Save ko observables to location hash. Observable values will also be read
+initially from location hash.

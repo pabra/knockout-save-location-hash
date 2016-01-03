@@ -1,0 +1,60 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+        "browser": true,
+    },
+    "globals": {
+        /**
+         * true  - variable is allowed to be overwritten
+         * false - not allowed to be overwritten
+         */
+        "$": false,
+        "jQuery": false,
+    },
+    "rules": {
+        /**
+         * 0 - turn the rule off
+         * 1 - turn the rule on as a warning (doesn't affect exit code)
+         * 2 - turn the rule on as an error (exit code is 1 when triggered)
+         */
+        "comma-dangle":             [2, "never"],
+        "no-unused-vars":           [2, {"vars": "local", "args": "none"}],
+        "new-cap":                  [2, {"newIsCap": true, "capIsNew": true, "capIsNewExceptions": ["Deferred"]}],
+        "one-var":                  [2, "always"],
+        "no-cond-assign":           [2, "except-parens"],
+        "no-else-return":           2,
+        "no-constant-condition":    2,
+        "no-control-regex":         2,
+        "no-dupe-args":             2,
+        "no-dupe-keys":             2,
+        "no-duplicate-case":        2,
+        "no-empty-character-class": 2,
+        "no-empty":                 2,
+        "no-ex-assign":             2,
+        "no-extra-boolean-cast":    2,
+        "no-extra-semi":            2,
+        "no-func-assign":           2,
+        "no-inner-declarations":    [2,"both"],
+        "no-invalid-regexp":        2,
+        "no-irregular-whitespace":  2,
+        "no-negated-in-lhs":        2,
+        "no-obj-calls":             2,
+        "no-regex-spaces":          2,
+        "no-sparse-arrays":         2,
+        "no-unreachable":           2,
+        "use-isnan":                2,
+        "valid-typeof":             2,
+        "no-unexpected-multiline":  2,
+        "no-console":               1,
+        "no-debugger":              1,
+        "consistent-return":        0,
+        "comma-spacing":            0,
+        "key-spacing":              0,
+        "no-underscore-dangle":     0,
+        "space-infix-ops":          0,
+        "no-multi-spaces":          0,
+        "quotes":                   0,
+        "camelcase":                0,
+        "yoda":                     0,
+    }
+}
