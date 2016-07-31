@@ -1,5 +1,6 @@
 /* global ko */
 (function() {
+    "use strict";
     var observed = {},
         otherHash = '',
         hashValues = {},
