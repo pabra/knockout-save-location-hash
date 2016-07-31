@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Store observables in location hash</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="knockout-save-observable-location-hash.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+</head>
+<body>
+    <h1>Store observables in location hash</h1>
+    <div class="block list">
+        <h2>List of pets</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">Pets I like</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: pets">
+                <tr data-bind="css: {favorite: $data===$parent.favorite()}">
+                    <td>
+                        <input type="checkbox"
+                               title="set pet as favorite"
+                               data-bind="checked: $data===$parent.favorite(),
+                                          click: $parent.setFavorite,
+                                          css: {hover_visible: $data!==$parent.favorite()}"/>
+                    </td>
+                    <td data-bind="text: $data"></td>
+                    <td>
+                        <a href="#"
+                           class="del hover_visible"
+                           title="remove pet from list"
+                           data-bind="click: $parent.deletePet">
+                            x
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="block add">
+        <h2>add pet</h2>
+        <input id="new_pet"/>
+        <input type="button"
+               value="add"
+               title="add pet to list"
+               data-bind="click: addPet"/>
+    </div>
+    <div class="block fav" data-bind="visible: favorite">
+        <h2>my favorite pet</h2>
+        <b data-bind="text: favorite"></b>
+    </div>
+    <div class="block links">
+        <h2>Links</h2>
+        <table>
+            <tr>
+                <td><a data-bind="attr: {href: resetLink()}">reset model</a></td>
+                <td><span class="small" data-bind="text: resetLink()"></span></td>
+        </tr><tr>
+            <td><a data-bind="attr: {href: currentLocation}">share model</a></td>
+            <td><span class="small" data-bind="text: decodeURIComponent(currentLocation())"></span></td>
+        </tr>
+        </table>
+        </div>
+</body>
+</html>

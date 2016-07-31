@@ -1,0 +1,105 @@
+body {
+    background: #eee;
+    margin: 100px;
+}
+
+div.block {
+    /*background: #f8f8f8;*/
+    float: left;
+    /*display: inline-block;*/
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 5px;
+    min-width: 160px;
+    min-height: 90px;
+}
+
+div.block.list {
+    background: #fffaf0;
+}
+
+div.block.add {
+    background: #f9fff0;
+}
+
+div.block.fav {
+    background: #f0fff5;
+}
+
+div.block.links {
+    background: #f0feff;
+}
+
+a {
+    color: #194b4d;
+    text-decoration: none;
+}
+
+h2 {
+    border-bottom: 1px solid #aaa;
+    margin: 0 0 20px 0;
+    font-size: 1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/*tr:hover td {
+    background: #f5fbf4;
+    transition: 0.3s;
+}*/
+
+tr.favorite td {
+    /*background: #b1e2a7;*/
+    background: #b6e467;
+    transition: 0.3s;
+}
+
+input#new_pet {
+    width: 75px;
+}
+
+.hover_visible {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+tr:hover .hover_visible {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+table {
+    border: 1px solid #333;
+}
+
+td {
+    border-bottom: 1px solid #ccc;
+    padding-left: 25px;
+}
+
+th,
+tr:last-child td {
+    border-bottom: 1px solid #333;
+}
+
+a.del {
+    background-color: #d65c5c;
+    display: block;
+    width: 15px;
+    height: 15px;
+    line-height: 12px;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+}
+
+span.small {
+    font-size: 0.8em;
+}
